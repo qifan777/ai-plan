@@ -1,0 +1,31 @@
+.nav-bar-component {
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  .image-wrapper {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    image {
+      width: 44px;
+      height: 44px;
+    }
+  }
+  .left-slot {
+    flex-shrink: 0;
+  }
+
+  .title {
+    font-size: 32px;
+    color: rgba(black, 0.8);
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+  .right {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

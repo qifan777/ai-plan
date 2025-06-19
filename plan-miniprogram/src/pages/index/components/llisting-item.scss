@@ -1,0 +1,40 @@
+.item-wrapper {
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 26px;
+    padding: 10px 20px;
+  }
+
+  .menus {
+    width: 150px;
+  }
+
+  .tasks {
+    .task-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 20px;
+      border-top: 1px solid rgba(black, 0.1);
+      &.checked{
+        .task-title{
+          text-decoration: line-through;
+        }
+      }
+      .task-title {
+        font-size: 23px;
+      }
+
+      .time {
+        font-size: 22px;
+      }
+    }
+  }
+}

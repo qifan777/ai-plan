@@ -1,0 +1,39 @@
+
+.post-menu-list {
+  position: relative;
+  .post-mask {
+    width: 750px;
+    height: 100vh;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .comment-menu {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 15px;
+    background: #f7f7f7;
+    .dot:first-child {
+      margin-right: 10px;
+    }
+    .dot {
+      width: 4px;
+      height: 4px;
+      background: #7b8bac;
+    }
+  }
+  .menu-list {
+    min-width: 280px;
+    position: absolute;
+    bottom: 50px;
+    left: -250px;
+    box-shadow: 0 0 5px 5px rgba(black, 0.05);
+    border-radius: 15px;
+    z-index: 20;
+    background-color: white;
+  }
+
+}

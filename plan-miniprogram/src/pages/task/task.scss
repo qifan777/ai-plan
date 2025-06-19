@@ -1,0 +1,13 @@
+.steps{
+  .step{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    input{
+      border: 1px solid rgba(black,0.1);
+      padding: 10px;
+      border-radius: 10px;
+      margin:  0 10px;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.post-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 30px;
+  border-bottom: 1px solid rgba($color: black, $alpha: 0.05);
+  .content {
+    margin-left: 20px;
+    width: 100%;
+    .name {
+      color: #558456;
+      margin-bottom: 10px;
+    }
+    .text {
+      margin-bottom: 20px;
+    }
+    .pictures {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      image {
+        width: 160px;
+        height: 160px;
+      }
+    }
+    .date-menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .date {
+        font-size: 26px;
+        color: rgba($color: black, $alpha: 0.5);
+        margin-top: 10px;
+      }
+      .menu-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5px;
+        .button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 120px;
+          padding: 5px 10px;
+          image {
+            height: 30px;
+            width: 30px;
+          }
+          .button-text {
+            margin-left: 20px;
+          }
+        }
+        .divider {
+          width: 1px;
+          background-color: rgba(black, 0.5);
+          height: 20px;
+        }
+      }
+    }
+    .comment-like {
+      margin: 20px 0;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: white;
+      .like-list {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 0;
+        .icon {
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+        }
+        .like-name {
+          margin-right: 10px;
+          color: #558456;
+        }
+      }
+      .divider {
+        border-bottom: 0.5px solid rgba(216, 216, 216, 0.5);
+        width: 100%;
+      }
+    }
+  }
+}

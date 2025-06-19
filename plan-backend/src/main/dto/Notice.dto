@@ -1,0 +1,13 @@
+export io.github.qifan777.server.notice.entity.Notice
+
+input NoticeInput {
+    #allScalars(Notice)
+    id
+}
+
+specification NoticeSpec {
+    #allScalars
+    like/i(title)
+    like/i(content)
+    associatedIdEq(creator)
+}

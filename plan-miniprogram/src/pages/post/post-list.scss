@@ -1,0 +1,24 @@
+.community {
+  background-size: cover;
+  background: linear-gradient(to bottom, transparent -100px, #fff 1000px),
+  linear-gradient(to left, #d9f5e6, #fbebd5);
+  height: 100vh;
+  width: 100%;
+  .nav-bar {
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    justify-content: center;
+    margin-bottom: 30px;
+    .center {
+      position: relative;
+      .camera {
+        position: absolute;
+        top: 0;
+        right: -100px;
+      }
+    }
+  }
+
+}

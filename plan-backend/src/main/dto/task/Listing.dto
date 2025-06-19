@@ -1,0 +1,14 @@
+export io.github.qifan777.server.plan.listing.entity.Listing
+
+input ListingInput {
+    #allScalars(Listing)
+    id
+    id(user)
+}
+
+specification ListingSpec {
+    #allScalars
+    like/i(name)
+    associatedIdEq(user)
+    associatedIdEq(creator)
+}

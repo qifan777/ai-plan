@@ -1,0 +1,24 @@
+.feedback {
+  .content {
+    border-radius: 20rpx;
+    margin: 30rpx;
+    padding: 20rpx;
+    background-color: white;
+    height: 83vh;
+    .text-wrapper {
+      margin-bottom: 30rpx;
+    }
+  }
+
+  .bottom {
+    background-color: white;
+    position: fixed;
+    bottom: 200px;
+    width: 100%;
+    color: white;
+    .submit-btn {
+      width: 500rpx;
+      margin: auto;
+    }
+  }
+}

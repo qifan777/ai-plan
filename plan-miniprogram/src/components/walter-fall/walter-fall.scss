@@ -1,0 +1,17 @@
+.water-fall {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 30px;
+  margin: 15px;
+  .item-wrapper {
+    margin-top: 15px;
+  }
+  .left-water-fall {
+    justify-content: center;
+  }
+
+  .right-water-fall {
+    justify-content: center;
+  }
+}

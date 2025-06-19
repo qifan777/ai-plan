@@ -1,0 +1,14 @@
+.user-edit {
+  .choose-avatar {
+    background-color: rgba(white, 0);
+    border: 0 !important;
+    padding: 0;
+    .avatar {
+      display: flex;
+    }
+  }
+  .submit {
+    width: 600px;
+    margin: 40px auto;
+  }
+}

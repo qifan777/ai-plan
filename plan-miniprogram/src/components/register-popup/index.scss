@@ -1,0 +1,29 @@
+.register-section {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .btn {
+    background-color: rgb(0, 200, 0);
+    margin-top: 100px;
+    color: white;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    font-size: 40px;
+  }
+  .agreement {
+    color: #558456;
+    --nut-checkbox-label-color: #558456;
+    --nut-checkbox-button-background: #558456;
+    margin: 40px 0;
+    .agreement-content {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

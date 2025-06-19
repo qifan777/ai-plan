@@ -1,0 +1,146 @@
+page {
+  background-color: #f2fafe;
+}
+
+.chat-page {
+  .scroll-view {
+    //height: 100vh;
+    width: 500px;
+    margin: 60px auto 20px auto;
+    height: 900px;
+
+    .session {
+      margin-top: 20px;
+    }
+  }
+
+  .buttons {
+    position: fixed;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 550px;
+
+    .new-session {
+      margin-bottom: 30px;
+    }
+  }
+
+  .messages {
+    padding-bottom: 200px;
+    //height: 80vh;
+    .row {
+      margin-top: 30rpx;
+      .chat-row {
+        display: flex;
+        align-items: flex-start;
+
+        &.chat-right {
+          justify-content: flex-end;
+
+          .avatar {
+            margin-left: 20rpx;
+          }
+        }
+
+        &.chat-left {
+          .avatar {
+            margin-right: 20rpx;
+          }
+        }
+
+        .message {
+          font-size: 28px;
+          color: #333333;
+          max-width: 600px;
+          background-color: white;
+          padding: 20rpx;
+          border-radius: 10rpx;
+          box-shadow: 0 12px 20px rgba(#1581d5, 0.06);
+
+          .text-message {
+            word-break: break-all;
+          }
+
+          .message-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+
+            .front {
+              display: flex;
+              align-items: center;
+
+              .front-icon {
+                display: flex;
+                align-items: center;
+              }
+
+              image {
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+              }
+            }
+
+            .rear {
+              display: flex;
+              align-items: center;
+
+              image {
+                width: 40px;
+                height: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    position: fixed;
+    bottom: 0;
+    width: 750rpx;
+    padding: 20rpx;
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+
+    .bottom-icon {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+
+      image {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .mid {
+      flex-grow: 1;
+
+      .input-view {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        padding: 0 20rpx;
+        height: 65rpx;
+        border-radius: 10rpx;
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+
+    .right {
+      margin-left: 20rpx;
+      margin-right: 40rpx;
+    }
+  }
+}

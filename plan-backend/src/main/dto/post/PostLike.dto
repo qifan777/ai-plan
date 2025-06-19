@@ -1,0 +1,13 @@
+export io.github.qifan777.server.post.like.entity.PostLike
+
+input PostLikeInput {
+    #allScalars(PostLike)
+    id
+    id(post)
+}
+
+specification PostLikeSpec {
+    #allScalars
+    associatedIdEq(post)
+    associatedIdEq(creator)
+}

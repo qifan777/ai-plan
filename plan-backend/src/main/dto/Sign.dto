@@ -1,0 +1,14 @@
+
+export io.github.qifan777.server.plan.sign.entity.Sign
+
+input SignInput {
+    #allScalars(Sign)
+    id
+    id(user)
+}
+
+specification SignSpec {
+    #allScalars
+    associatedIdEq(user)
+    associatedIdEq(creator)
+}

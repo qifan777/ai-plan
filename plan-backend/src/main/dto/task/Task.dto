@@ -1,0 +1,22 @@
+export io.github.qifan777.server.plan.task.entity.Task
+
+input TaskInput {
+    #allScalars(Task)
+    id
+    id(listing)
+    steps{
+        name
+        checked
+    }
+}
+
+specification TaskSpec {
+    #allScalars
+    like/i(name)
+    ge(finishTime)
+    le(finishTime)
+    ge(remindTime)
+    le(remindTime)
+    associatedIdEq(user)
+    associatedIdEq(creator)
+}

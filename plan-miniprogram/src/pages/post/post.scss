@@ -1,0 +1,30 @@
+.post-page {
+  .content {
+    border-radius: 20rpx;
+    margin: 30rpx;
+    background-color: white;
+    height: 83vh;
+    .text-wrapper {
+      margin-bottom: 30rpx;
+    }
+  }
+
+  .bottom {
+    background-color: white;
+    position: fixed;
+    bottom: 200px;
+    width: 100%;
+    color: white;
+    .submit-button {
+      width: 690rpx;
+      color: #558456;
+      border-radius: 999px;
+      padding: 30px 0;
+      font-size: 32px;
+      font-weight: 400;
+      margin: auto;
+      text-align: center;
+      background: linear-gradient(90deg, #fcebd4 0%, #d8f4e5 89%);
+    }
+  }
+}

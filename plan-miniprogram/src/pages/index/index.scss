@@ -1,0 +1,54 @@
+.index-page {
+  background-color: rgb(black,0.05);
+  min-height: 100vh;
+  .slideshow-swiper {
+    border-radius: 20px;
+    width: 690px !important;
+    margin: auto;
+
+    .nut-swiper-item {
+      overflow: hidden;
+    }
+
+    .slideshow-image {
+      width: 100%;
+    }
+  }
+
+  .section {
+    padding: 30px;
+    .title-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .left{
+        display: flex;
+        align-items: center;
+        .icon{
+          width: 40px;
+          margin-right: 20px;
+        }
+      }
+      .right{
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .listing-form{
+    padding: 20px;
+  }
+  .create{
+    position: fixed;
+    bottom: 40px;
+    right: 80px;
+    background-color: #f5d131;
+    border: 1px solid rgba(black,0.2);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

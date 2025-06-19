@@ -1,0 +1,19 @@
+export io.github.qifan777.server.ai.message.entity.AiMessage
+
+input AiMessageInput {
+    #allScalars(AiMessage)
+
+    id
+
+    id(session)
+}
+
+specification AiMessageSpec {
+    #allScalars
+
+    like /i(textContent)
+
+    associatedIdEq(creator)
+
+    associatedIdEq(session)
+}

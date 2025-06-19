@@ -1,0 +1,14 @@
+export io.github.qifan777.server.plan.step.entity.TaskStep
+
+input TaskStepInput {
+    #allScalars(TaskStep)
+    id
+    id(task)
+}
+
+specification TaskStepSpec {
+    #allScalars
+    like/i(name)
+    associatedIdEq(task)
+    associatedIdEq(creator)
+}

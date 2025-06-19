@@ -1,0 +1,12 @@
+export io.github.qifan777.server.post.root.entity.Post
+
+input PostInput {
+    #allScalars(Post)
+    id
+}
+
+specification PostSpec {
+    #allScalars
+    like/i(content)
+    associatedIdEq(creator)
+}

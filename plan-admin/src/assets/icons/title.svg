@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="1024px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#A2D1FF" offset="1%"></stop>
+            <stop stop-color="#3692EB" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(12.000000, 139.000000)" fill="url(#linearGradient-1)" stroke="#3692EB">
+            <path d="M746.666667,120 C886.56,120 1000,233.44 1000,373.333333 C1000,513.226667 886.56,626.666667 746.666667,626.666667 C606.773333,626.666667 493.333333,513.226667 493.333333,373.333333 C493.333333,233.44 606.773333,120 746.666667,120 Z" id="路径" fill-opacity="0.6" opacity="0.502"></path>
+            <path d="M373.333333,0 C579.52,0 746.666667,167.146667 746.666667,373.333333 C746.666667,579.52 579.52,746.666667 373.333333,746.666667 C167.146667,746.666667 0,579.52 0,373.333333 C0,167.146667 167.146667,0 373.333333,0 Z" id="路径" fill-opacity="0.671"></path>
+        </g>
+    </g>
+</svg>

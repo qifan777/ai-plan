@@ -1,0 +1,30 @@
+.comment-title {
+  .comment-wrapper {
+    padding: 20rpx 20rpx 50px;
+    .comment-input {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      transition: all 0.3s linear;
+      .input {
+        background-color: #f4f4f4;
+        border-radius: 30rpx;
+        font-size: 30rpx;
+        padding: 20px;
+        margin-left: 25rpx;
+        flex: 1;
+        max-height: 115px;
+      }
+
+      .submit {
+        background: #20a162;
+        color: white;
+        font-size: 28px;
+        height: 60px;
+        margin-left: 20px;
+        line-height: 60px;
+      }
+    }
+  }
+}
+

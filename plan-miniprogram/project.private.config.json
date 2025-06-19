@@ -1,0 +1,155 @@
+{
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "plan-miniprogram",
+  "setting": {
+    "compileHotReLoad": true,
+    "bigPackageSizeSupport": true,
+    "urlCheck": false,
+    "coverView": true,
+    "lazyloadPlaceholderEnable": false,
+    "skylineRenderEnable": false,
+    "preloadBackgroundData": false,
+    "autoAudits": false,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "showShadowRootInWxmlPanel": false,
+    "useStaticServer": false,
+    "useLanDebug": false,
+    "showES6CompileOption": false,
+    "checkInvalidKey": true,
+    "ignoreDevUnusedFiles": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/sign/sign",
+          "pathName": "pages/sign/sign",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/task/task",
+          "pathName": "pages/task/task",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/chat/chat",
+          "pathName": "pages/chat/chat",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/service/service",
+          "pathName": "pages/service/service",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/course/course-list",
+          "pathName": "pages/course/course-list",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/article/article-details",
+          "pathName": "pages/article/article-details",
+          "query": "id=0f96f3bd6b1b4920b09de7b8281113a8",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/user/user-edit",
+          "pathName": "pages/user/user-edit",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/vacate/vacate-list",
+          "pathName": "pages/vacate/vacate-list",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/course/course-order-list",
+          "pathName": "pages/course/course-order-list",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/course/course-details",
+          "pathName": "pages/course/course-details",
+          "query": "id=193419c2ceb54142adaade45b6ede3e2",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/user/user-edit",
+          "pathName": "pages/user/user-edit",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/user/user",
+          "pathName": "pages/user/user",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/chat/chat",
+          "pathName": "pages/chat/chat",
+          "query": "sessionId=07398c28ce454959bcfcbe307beb98bb0f07d638f1bc401188d86dc650ab06a7&userId=0f07d638f1bc401188d86dc650ab06a7",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/user/visitor",
+          "pathName": "pages/user/visitor",
+          "query": "id=0f07d638f1bc401188d86dc650ab06a7",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/scoop/scoop",
+          "pathName": "pages/scoop/scoop",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/chat/chat",
+          "pathName": "pages/chat/chat",
+          "query": "userId=0f07d638f1bc401188d86dc650ab06a7",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/session/session-list",
+          "pathName": "pages/session/session-list",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "libVersion": "3.6.6"
+}

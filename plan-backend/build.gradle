@@ -1,0 +1,73 @@
+plugins {
+    id 'org.springframework.boot' version(libs.versions.spring.boot)
+    id "tech.argonariod.gradle-plugin-jimmer" version "latest.release"
+    id 'java'
+}
+apply plugin: "io.spring.dependency-management"
+java {
+    sourceCompatibility = '17'
+}
+jimmer {
+    version = libs.versions.jimmer
+}
+
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/public/' }
+    maven { url 'https://maven.aliyun.com/repository/spring/' }
+    mavenCentral()
+    mavenLocal()
+}
+dependencies {
+    implementation(platform(libs.spring.ai))
+    implementation(platform(libs.uni.ai))
+    implementation(libs.wechat.miniapp)
+    implementation(libs.hutool.core)
+    implementation(libs.sa.token)
+    implementation(libs.sa.token.redis)
+    implementation(libs.easy.excel)
+    implementation 'org.springframework.ai:spring-ai-starter-model-openai'
+    implementation 'org.springframework:spring-test'
+    implementation 'org.springframework.boot:spring-boot-configuration-processor'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.freemarker:freemarker'
+    implementation 'com.mysql:mysql-connector-j'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'io.github.qifan777:spring-boot-starter-oss'
+    implementation 'io.github.qifan777:generator-core'
+    implementation 'io.github.qifan777:common'
+    implementation 'io.github.qifan777:spring-boot-starter-security'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'io.github.qifan777:generator-processor'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+tasks.jar {
+    doFirst {
+        manifest {
+            attributes["Main-Class"] = 'io.github.qifan777.server.ServerApplication'
+            attributes["Class-Path"] = configurations.runtimeClasspath.collect { 'lib/' + it.getName() }.join(' ')
+            include("**/*")
+        }
+    }
+    archiveFileName = "app.jar"
+}
+tasks.register("outputZip", Zip) {
+    dependsOn(configurations.runtimeClasspath)
+    dependsOn(tasks.jar)
+    archiveExtension = "tar.gz"
+    from(configurations.runtimeClasspath) {
+        into("/app-all/lib")
+    }
+    from("build/libs/app.jar") {
+        into("/app-all")
+    }
+    archiveFileName = "app-all.zip"
+}
+test {
+    useJUnitPlatform()
+}
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs << "-Xmaxerrs" << "1000"
+}

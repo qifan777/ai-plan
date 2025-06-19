@@ -1,0 +1,16 @@
+export io.github.qifan777.server.post.comment.entity.PostComment
+
+input PostCommentInput {
+    #allScalars(PostComment)
+    id
+    id(parent)
+    id(post)
+}
+
+specification PostCommentSpec {
+    #allScalars
+    associatedIdEq(parent)
+    associatedIdEq(post)
+    like/i(content)
+    associatedIdEq(creator)
+}

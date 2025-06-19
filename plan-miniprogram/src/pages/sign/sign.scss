@@ -1,0 +1,43 @@
+.sign{
+  background-color: rgba(black,0.05);
+  min-height: 100vh;
+}
+.achievement-list{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 20px;
+  background-color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+
+  .achievement-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    image{
+      width: 150px;
+    }
+  }
+}
+.user{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  .info{
+    margin-left: 20px;
+  }
+  .bottom{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: rgb(black,0.6);
+    .sign-count{
+      margin-left: 20px;
+    }
+  }
+}

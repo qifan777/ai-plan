@@ -1,0 +1,17 @@
+@mixin text-max-line($line) {
+    // 文字只能显示一行
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    // 溢出部分用 ...代替
+    text-overflow: ellipsis;
+}
+
+$primary-color: #fcd956;
+$primary-color-end: #f5d131;
+page{
+  --nutui-color-primary-icon: #fcd956;
+  --nutui-color-primary-stop-1: #f5d131;
+  --nutui-color-primary-stop-2: #f5d131;
+}

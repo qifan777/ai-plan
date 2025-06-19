@@ -1,0 +1,24 @@
+rootProject.name = 'plan-backend'
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            version('easy-excel', '4.0.3')
+            version("spring-boot", '3.2.4')
+            version('jimmer', '0.9.89')
+            version('hutool', '5.8.26')
+            version('sa-token', '1.37.0')
+            version('wechat', '4.6.0')
+            version('uni-ai', '0.1.12')
+            version('spring-ai','1.0.0')
+            library('easy-excel', 'com.alibaba', 'easyexcel').versionRef('easy-excel')
+            library('hutool-core', 'cn.hutool', 'hutool-core').versionRef('hutool')
+            library('sa-token', 'cn.dev33', 'sa-token-spring-boot3-starter').versionRef('sa-token')
+            library('sa-token-redis', 'cn.dev33', 'sa-token-redis-jackson').versionRef('sa-token')
+            library('wechat-miniapp', 'com.github.binarywang', 'wx-java-miniapp-spring-boot-starter').versionRef('wechat')
+            library('wechat-pay', 'com.github.binarywang', 'wx-java-pay-spring-boot-starter').versionRef('wechat')
+            library('uni-ai', 'io.github.qifan777', 'uni-ai-bom').versionRef('uni-ai')
+            library('spring-ai', 'org.springframework.ai', 'spring-ai-bom').versionRef('spring-ai')
+        }
+    }
+}
+

@@ -1,0 +1,52 @@
+{
+  "name": "plan-admin",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build",
+    "lint": "eslint . --fix",
+    "format": "prettier --write src/",
+    "api-admin": "node .\\scrips\\generate-api.js"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@js-preview/docx": "^1.6.4",
+    "@js-preview/excel": "^1.7.14",
+    "@js-preview/pdf": "^2.0.10",
+    "axios": "^1.8.3",
+    "element-plus": "^2.9.6",
+    "lodash": "^4.17.21",
+    "md-editor-v3": "^5.4.5",
+    "pinia": "^3.0.1",
+    "sse.js": "^2.6.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.13.4",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.4.0",
+    "@vue/tsconfig": "^0.7.0",
+    "adm-zip": "^0.5.10",
+    "eslint": "^9.20.1",
+    "eslint-plugin-vue": "^9.32.0",
+    "fs-extra": "^11.1.1",
+    "jiti": "^2.4.2",
+    "npm-run-all2": "^7.0.2",
+    "prettier": "^3.5.1",
+    "sass-embedded": "^1.85.1",
+    "typescript": "~5.7.3",
+    "uuid": "^9.0.1",
+    "vite": "^6.1.0",
+    "vite-plugin-vue-devtools": "^7.7.2",
+    "vue-tsc": "^2.2.2"
+  }
+}
