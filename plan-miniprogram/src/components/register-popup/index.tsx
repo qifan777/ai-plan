@@ -22,17 +22,12 @@ export default function RegisterPopup({
   const handleClose = () => {
     dispatch(setRegisterShow(false));
   };
-  const handleLogin = async (phoneCode?: string) => {
-    if (!phoneCode) return;
+  const handleLogin = async () => {
     const loginRes = await Taro.login();
     await Taro.showLoading();
     // 调用微信登录接口
-    const res = await api.userWeChatForFrontController.registerV2({
-      body: {
-        loginCode: loginRes.code,
-        phoneCode: phoneCode,
-        inviteCode: "",
-      },
+    const res = await api.userWeChatForFrontController.registerByOpenId({
+      loginCode: loginRes.code,
     });
     Taro.setStorageSync("token", res.tokenValue);
     dispatch(getUserInfo());
@@ -48,12 +43,8 @@ export default function RegisterPopup({
       position="bottom"
     >
       <View className="register-section">
-        <Button
-          className="btn"
-          openType="getPhoneNumber"
-          onGetPhoneNumber={(e) => handleLogin(e.detail.code)}
-        >
-          手机号快捷登录
+        <Button className="btn" onClick={() => handleLogin()}>
+          微信快捷登录
         </Button>
         <Checkbox
           className="agreement"

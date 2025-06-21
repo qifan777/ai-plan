@@ -99,19 +99,6 @@ const handleSendSMS = () => {
                   <el-form-item label="密码" prop="password">
                     <el-input v-model="registerForm.password" type="password"></el-input>
                   </el-form-item>
-                  <!--                  <el-form-item label="验证码" prop="code">-->
-                  <!--                    <div class="sms">-->
-                  <!--                      <el-input v-model="registerForm.code"></el-input>-->
-                  <!--                      <el-button-->
-                  <!--                        class="send-sms"-->
-                  <!--                        type="success"-->
-                  <!--                        @click="handleSendSMS"-->
-                  <!--                        :disabled="countDown > 0"-->
-                  <!--                      >-->
-                  <!--                        {{ countDown === 0 ? '发送验证码' : countDown }}-->
-                  <!--                      </el-button>-->
-                  <!--                    </div>-->
-                  <!--                  </el-form-item>-->
                 </el-form>
                 <div class="button-wrapper">
                   <el-button class="register" type="primary" @click="handleRegister">

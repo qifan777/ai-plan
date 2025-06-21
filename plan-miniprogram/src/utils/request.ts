@@ -27,17 +27,17 @@ const requestWithToken = async <T>(
       dataType: "json",
       success: (response) => {
         const result = response.data as Result<T>;
-        if (result.code !== 1) {
-          Taro.showToast({
-            title: result.msg,
-            icon: "none",
-          });
-          reject(result);
-        }
         if (result.code === 1001007 || result.code === 1001008) {
           store.dispatch(setRegisterShow(true));
           console.log("token过期");
         } else {
+          if (result.code !== 1) {
+            Taro.showToast({
+              title: result.msg,
+              icon: "none",
+            });
+            reject(result);
+          }
           resolve(result.result);
         }
       },

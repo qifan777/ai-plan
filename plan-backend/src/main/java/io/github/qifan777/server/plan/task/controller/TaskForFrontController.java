@@ -67,4 +67,10 @@ public class TaskForFrontController {
         taskRepository.deleteAllById(ids);
         return true;
     }
+
+    @PostMapping("check")
+    public Boolean check(@RequestParam String id, @RequestParam Boolean checked) {
+        taskRepository.checkTask(id, checked);
+        return true;
+    }
 }

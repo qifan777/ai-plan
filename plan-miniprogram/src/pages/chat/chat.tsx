@@ -4,15 +4,15 @@ import Taro from "@tarojs/taro";
 import { Button, Popup } from "@nutui/nutui-react-taro";
 import { Image, Input, ScrollView } from "@tarojs/components";
 import SessionItem from "@/pages/chat/components/session-item";
-import { usePageHelper } from "@/hook";
 import { AiMessageInput } from "@/apis/__generated/model/static";
 import { createParser, EventSourceMessage } from "eventsource-parser";
 import _ from "lodash";
 import { Del, Plus } from "@nutui/icons-react-taro";
 import commentIcon from "@/assets/icons/comment.png";
 import UserAvatar from "@/components/user/user-avatar";
-import markdownTowXml from "../../towxml";
+import { AiSessionDto } from "@/apis/__generated/model/dto";
 import "./chat.scss";
+import markdownTowXml from "../../towxml";
 
 type ChatResponse = {
   metadata: {
@@ -38,15 +38,21 @@ export type AiMessage = Pick<
 };
 
 export default function Chat() {
-  const {
-    dataList: sessionList,
-    setDataList,
-    reloadPageData,
-  } = usePageHelper(
-    api.aiSessionForFrontController.query,
-    api.aiSessionForFrontController,
-    { query: {}, pageSize: 1000 },
-  );
+  const [sessionList, setSessionList] = useImmer<
+    AiSessionDto["AiSessionRepository/COMPLEX_FETCHER_FOR_FRONT"][]
+  >([]);
+
+  const loadSession = async () => {
+    const list = (
+      await api.aiSessionForFrontController.query({
+        body: { pageNum: 1, pageSize: 1000, query: {} },
+      })
+    ).content;
+    setSessionList([...list]);
+    if (list.length > 0) {
+      changeSession(0, list);
+    }
+  };
   const [visible, setVisible] = useImmer(false);
   const createSession = async (name: string = "新的聊天") => {
     const res = await api.aiSessionForFrontController.save({
@@ -54,7 +60,7 @@ export default function Chat() {
         name,
       },
     });
-    await reloadPageData();
+    await loadSession();
     return res;
   };
   const handleClearSession = () => {
@@ -65,16 +71,21 @@ export default function Chat() {
           await api.aiMessageForFrontController.delete({
             body: sessionList.map((item) => item.id),
           });
-          await reloadPageData();
+          await loadSession();
         }
       },
     });
   };
   const [activeIndex, setActiveIndex] = useImmer(-1);
   const [messageList, setMessageList] = useImmer<AiMessage[]>([]);
-  const changeSession = (index: number) => {
+  const changeSession = (
+    index: number,
+    sessions: ReadonlyArray<
+      AiSessionDto["AiSessionRepository/COMPLEX_FETCHER_FOR_FRONT"]
+    >,
+  ) => {
     setActiveIndex(index);
-    setMessageList([...sessionList[index].messages]);
+    setMessageList([...sessions[index].messages]);
   };
   const [message, setMessage] = useImmer("");
   const scrollToBottom = _.throttle(() => {
@@ -83,7 +94,9 @@ export default function Chat() {
       duration: 50,
     });
   }, 50);
-
+  Taro.useLoad(async () => {
+    await loadSession();
+  });
   const handleSendMessage = async () => {
     Taro.showLoading();
     if (activeIndex < 0) {
@@ -175,16 +188,19 @@ export default function Chat() {
         <ScrollView className="scroll-view" scrollY>
           {sessionList.map((row, index) => {
             return (
-              <div onClick={() => changeSession(index)} key={row.id}>
+              <div
+                onClick={() => changeSession(index, sessionList)}
+                key={row.id}
+              >
                 <SessionItem
                   active={activeIndex == index}
                   session={row}
                   onUpdateSession={(session) => {
-                    setDataList(async (draft) => {
+                    setSessionList(async (draft) => {
                       draft[index].name = session.name;
                     });
                   }}
-                  onDelete={reloadPageData}
+                  onDelete={loadSession}
                 ></SessionItem>
               </div>
             );
@@ -215,6 +231,7 @@ export default function Chat() {
       </Popup>
       <div className="messages">
         {messageList.map((row, index) => {
+          // @ts-ignore
           return (
             <div
               className={[

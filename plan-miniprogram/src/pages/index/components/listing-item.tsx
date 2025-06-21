@@ -4,7 +4,7 @@ import { Button, Checkbox, Popover, Swipe } from "@nutui/nutui-react-taro";
 import { Check, More } from "@nutui/icons-react-taro";
 import dayjs from "dayjs";
 import { switchPage } from "@/utils/common";
-import "./llisting-item.scss";
+import "./listing-item.scss";
 
 export default function ListingItem({
   value,

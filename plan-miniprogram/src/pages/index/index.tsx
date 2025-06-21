@@ -29,6 +29,7 @@ export default function Index() {
     api.listingForFrontController.query,
     api.listingForFrontController,
     { query: {} },
+    { enableShowLoad: true, enableLoad: false },
   );
   Taro.useLoad(async () => {
     const res = await api.slideshowForFrontController.query({
@@ -41,15 +42,17 @@ export default function Index() {
     });
     setSlideshowList([...res.content]);
   });
-  const handleChange = (listId: string, taskId: string, value: boolean) => {
+  const handleChange = async (
+    listId: string,
+    taskId: string,
+    checked: boolean,
+  ) => {
+    await api.taskForFrontController.check({ id: taskId, checked });
     setDataList((draft) => {
       const task = draft
         .filter((item) => item.id === listId)[0]
         .tasks.filter((item) => item.id === taskId)[0];
-      task.checked = value;
-      api.taskForFrontController.save({
-        body: { ...task, listingId: listId, checked: value },
-      });
+      task.checked = checked;
     });
   };
   const [visible, setVisible] = useImmer(false);

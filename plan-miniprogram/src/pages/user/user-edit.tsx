@@ -88,7 +88,10 @@ export default function UserEdit() {
           <div>
             <Input
               className="nickname"
+              type="nickname"
               value={user?.nickname}
+              onNickNameReview={(e) => {
+                console.log(e)}}
               onChange={(e) => chooseNickname(e)}
             />
           </div>

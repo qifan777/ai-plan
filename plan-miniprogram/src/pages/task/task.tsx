@@ -22,6 +22,7 @@ export default function Task() {
       const res = await api.taskForFrontController.findById({ id });
       form.setFieldsValue({
         ...res,
+        files: res.files ? res.files : [],
         listingId: res.listing.id,
         remindTime: res.remindTime?.toString().substring(0, 16),
         finishTime: res.finishTime?.toString().substring(0, 16),
@@ -93,8 +94,8 @@ export default function Task() {
             onClick={() => setVisible2(true)}
           />
         </FormItem>
-        <FormItem label="附件" name="files">
-          <Uploader upload={onUpload} />
+        <FormItem label="附件" name="files" initialValue={[]}>
+          <Uploader upload={onUpload} previewType="list" />
         </FormItem>
         <FormItem label="步骤" name="steps" initialValue={[]}>
           <div className="steps">

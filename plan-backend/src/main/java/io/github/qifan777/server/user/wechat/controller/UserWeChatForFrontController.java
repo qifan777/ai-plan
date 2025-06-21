@@ -10,10 +10,7 @@ import lombok.AllArgsConstructor;
 import org.babyfish.jimmer.client.meta.DefaultFetcherOwner;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("front/user-we-chat")
@@ -33,5 +30,11 @@ public class UserWeChatForFrontController {
     @PostMapping("register2")
     public SaTokenInfo registerV2(@RequestBody @Validated UserWeChatRegisterInputV2 registerInputV2) {
         return userWeChatService.registerV2(registerInputV2);
+    }
+
+    @PostMapping("register/open-id")
+    @SaIgnore
+    public SaTokenInfo registerByOpenId(@RequestParam String loginCode) {
+        return userWeChatService.registerByOpenId(loginCode);
     }
 }

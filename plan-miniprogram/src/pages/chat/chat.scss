@@ -59,6 +59,14 @@ page {
           padding: 20rpx;
           border-radius: 10rpx;
           box-shadow: 0 12px 20px rgba(#1581d5, 0.06);
+          .h2w {
+            font-size: 28px !important;
+
+          }
+            .h2w__main {
+            padding: 0;
+            margin: 0;
+          }
 
           .text-message {
             word-break: break-all;

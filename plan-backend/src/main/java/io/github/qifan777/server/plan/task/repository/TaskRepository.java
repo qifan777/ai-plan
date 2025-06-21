@@ -48,4 +48,10 @@ public interface TaskRepository extends JRepository<Task, String> {
                 .select(t.fetch(COMPLEX_FETCHER_FOR_FRONT))
                 .execute();
     }
+    default void checkTask(String taskId,boolean checked){
+        sql().createUpdate(t)
+                .where(t.id().eq(taskId))
+                .set(t.checked(),checked)
+                .execute();
+    }
 }

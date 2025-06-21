@@ -5,6 +5,8 @@ import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
 import cn.dev33.satoken.stp.SaLoginModel;
 import cn.dev33.satoken.stp.SaTokenInfo;
 import cn.dev33.satoken.stp.StpUtil;
+import cn.hutool.core.util.IdUtil;
+import cn.hutool.core.util.RandomUtil;
 import io.github.qifan777.server.dict.model.DictConstants;
 import io.github.qifan777.server.infrastructure.model.LoginDevice;
 import io.github.qifan777.server.user.root.entity.User;
@@ -76,8 +78,6 @@ public class UserWeChatService {
                                             .setPhone(registerInput.getPhone());
                                 }));
                             });
-                    StpUtil.switchTo(user.id());
-                    eventPublisher.publishEvent(new UserEvent.UserCreateEvent(user.id()));
                     return userWeChatRepository.save(UserWeChatDraft.$.produce(draft -> {
                         draft.setUser(user)
                                 .setOpenId(openid);
@@ -96,7 +96,35 @@ public class UserWeChatService {
         userWeChatRegisterInput.setInviteCode(registerInputV2.getInviteCode());
         userWeChatRegisterInput.setLoginCode(registerInputV2.getLoginCode());
         return register(userWeChatRegisterInput);
+    }
 
-
+    @SneakyThrows
+    public SaTokenInfo registerByOpenId(String loginCode) {
+        UserWeChatTable t1 = UserWeChatTable.$;
+        WxMaJscode2SessionResult session = wxMaService.getUserService()
+                .getSessionInfo(loginCode);
+        String openid = session.getOpenid();
+        UserWeChat userWeChat = userWeChatRepository.sql()
+                .createQuery(t1)
+                .where(t1.openId().eq(openid))
+                .select(t1.fetch(UserWeChatFetcher.$.allScalarFields().user(UserFetcher.$.phone())))
+                .fetchOptional()
+                .orElseGet(() -> {
+                    User user = userRepository.save(UserDraft.$.produce(draft -> {
+                        draft.setNickname("微信用户")
+                                // 此处密码无需加密,
+                                .setPassword("123456")
+                                .setStatus(DictConstants.UserStatus.NORMAL)
+                                // 不需要手机号
+                                .setPhone(RandomUtil.randomNumbers(11));
+                    }));
+                    return userWeChatRepository.save(UserWeChatDraft.$.produce(draft -> {
+                        draft.setUser(user)
+                                .setOpenId(openid);
+                    }));
+                });
+        StpUtil.login(userWeChat.user().id(), new SaLoginModel().setDevice(LoginDevice.MP_WECHAT)
+                .setTimeout(60 * 60 * 24 * 30 * 36));
+        return StpUtil.getTokenInfo();
     }
 }
