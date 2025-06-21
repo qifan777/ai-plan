@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.29, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: plan
+-- Host: 127.0.0.1    Database: ai_plan
 -- ------------------------------------------------------
--- Server version	8.0.36
+-- Server version	8.0.29
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -42,7 +42,7 @@ CREATE TABLE `ai_message` (
 
 LOCK TABLES `ai_message` WRITE;
 /*!40000 ALTER TABLE `ai_message` DISABLE KEYS */;
-INSERT INTO `ai_message` VALUES ('87cd2aac89ae40fba4fc8fe0be89b3b2','2025-06-05 23:47:28.319105','2025-06-05 23:47:28.319105','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','USER','你好',NULL,'ea7ce7b1b5114745ad62c9b1536acc16'),('8d4ad8cc476f40b3aef18c5cfd6d361b','2025-06-05 23:47:28.362850','2025-06-05 23:47:28.362850','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','ASSISTANT','你好！有什么可以帮助你的吗？','[]','ea7ce7b1b5114745ad62c9b1536acc16'),('ca3dc6959ce945c8a93f0084fadfce71','2025-06-07 10:38:38.302926','2025-06-07 10:38:38.302926','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','ASSISTANT','好的，根据你提供的信息，我来帮你总结一下任务“测试1”的完成情况：\n\n### 任务名称：测试1\n- **截至时间**：2025-06-05T21:15\n- **是否完成**：否\n- **任务步骤及完成情况**：\n  1. **步骤内容**：测试步骤1\n     - **是否完成**：是\n  2. **步骤内容**：测试333\n     - **是否完成**：是\n  3. **步骤内容**：测试步骤2\n     - **是否完成**：是\n\n### 总结\n- 任务“测试1”共有3个步骤，所有步骤都已经完成。\n- 尽管所有步骤都已完成，但整个任务的完成状态仍然标记为“否”。这可能意味着还有其他未列出的步骤或最终确认工作需要完成。\n\n如果你有其他需要补充的信息或进一步的帮助，请告诉我！','[]','ea7ce7b1b5114745ad62c9b1536acc16'),('f0bf5ff70a8b4a4fa0bb4bf7a51eb574','2025-06-07 10:38:38.199405','2025-06-07 10:38:38.199405','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','USER','帮我总结以下我的任务完成情况',NULL,'ea7ce7b1b5114745ad62c9b1536acc16');
+INSERT INTO `ai_message` VALUES ('28c461ac963e4e9aa33be2d880c9eeb0','2025-06-21 10:30:13.682285','2025-06-21 10:30:13.682285','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','ASSISTANT','学习Java是一个循序渐进的过程，下面是一些建议帮助你开始或继续你的Java学习之旅：\n\n### 1. 理解基础概念\n- **变量与数据类型**：了解如何声明变量、熟悉基本的数据类型（如int, double, boolean等）。\n- **控制结构**：掌握条件语句(if-else)和循环(for, while)的使用方法。\n- **函数/方法**：学会定义和调用方法，理解参数传递的概念。\n- **面向对象编程**：这是Java的核心之一。需要学习类(class)、对象(object)、继承(inheritance)、封装(encapsulation)以及多态(polymorphism)等概念。\n\n### 2. 实践编程\n- **编写代码**：理论知识很重要，但没有比实际动手写代码更好的学习方式了。可以从简单的程序做起，比如打印“Hello World”到屏幕。\n- **解决问题**：尝试解决一些小问题或者完成LeetCode、HackerRank上的挑战来提高自己的技能。\n- **项目实践**：随着水平的增长，可以参与到更复杂的项目中去，比如开发一个简易的图书管理系统或是个人博客网站。\n\n### 3. 学习资源\n- **在线课程**：Coursera、edX、Udemy等平台提供了许多优质的Java入门及进阶课程。\n- **书籍**：《Thinking in Java》(Bruce Eckel著)、《Effective Java》(Joshua Bloch著)都是不错的选择。\n- **官方文档**：阅读Oracle提供的Java官方文档对于深入理解语言特性非常有帮助。\n- **社区交流**：加入GitHub、Stack Overflow等技术社区，与其他开发者交流经验。\n\n### 4. 持续更新知识\n- 技术在不断进步，保持对新版本Java特性的关注是很重要的。同时也可以探索相关领域如Spring框架、微服务架构等。\n\n希望这些建议对你有所帮助！如果你有任何具体的问题或需要进一步指导，请随时告诉我。','[]','1796ba6ebef74dc0aa24394d505e265c'),('3932739fc3294439a05b454a53e985c3','2025-06-21 10:29:36.888204','2025-06-21 10:29:36.888204','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','ASSISTANT','你好！有什么可以帮助你的吗？','[]','1796ba6ebef74dc0aa24394d505e265c'),('6f3de7d1efb54077be1f1649d014cde4','2025-06-21 10:53:04.103871','2025-06-21 10:53:04.103871','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','USER','我目前的任务完成情况',NULL,'928c384040fe4f31955796e70c69b74c'),('87cd2aac89ae40fba4fc8fe0be89b3b2','2025-06-05 23:47:28.319105','2025-06-05 23:47:28.319105','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','USER','你好',NULL,'ea7ce7b1b5114745ad62c9b1536acc16'),('8d4ad8cc476f40b3aef18c5cfd6d361b','2025-06-05 23:47:28.362850','2025-06-05 23:47:28.362850','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','ASSISTANT','你好！有什么可以帮助你的吗？','[]','ea7ce7b1b5114745ad62c9b1536acc16'),('8fb66ffe0e774be39ea62a6c9247f27f','2025-06-21 10:53:04.123869','2025-06-21 10:53:04.123869','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','ASSISTANT','根据您提供的信息，您的任务完成情况如下：\n\n### 任务1：学习IO流\n- **截至时间**：2025-06-23T10:30\n- **是否完成**：是\n- **具体步骤及完成情况**：\n  - **步骤内容**：FileSteam实现文件独写\n    - **是否完成**：否\n  - **步骤内容**：ByteArraySteam实现读取二进制到内存再输出\n    - **是否完成**：否\n\n虽然整体任务标记为“是”，但其下的两个子任务都未完成。这可能意味着您认为已经掌握了关于IO流的基础知识，但具体的实践操作（如使用`FileInputStream`和`ByteArrayInputStream`）还未进行。\n\n### 任务2：学习多线程\n- **截至时间**：2025-06-28T10:45\n- **是否完成**：否\n- **具体步骤及完成情况**：\n  - **步骤内容**：看一些多线程的面试题\n    - **是否完成**：否\n  - **步骤内容**：学习Thread和线程池\n    - **是否完成**：否\n  - **步骤内容**：学习concurrent包相关的内容\n    - **是否完成**：否\n\n对于多线程的学习任务，目前还没有任何一部分被标记为已完成。看起来这个领域还有待深入探索。\n\n### 建议\n- 对于IO流部分，建议尽快通过实际编程练习来加深理解，比如尝试编写程序使用`FileInputStream`读取文件，并利用`ByteArrayOutputStream`将数据写入内存。\n- 多线程是一个复杂但非常重要的主题，特别是对于提升程序性能方面。可以先从基础概念开始，如什么是线程、如何创建线程等，然后逐步过渡到更高级的主题，例如线程间通信、同步机制以及并发工具类的应用。\n\n希望这些信息对您有所帮助！如果需要进一步指导或有其他问题，请随时告诉我。','[]','928c384040fe4f31955796e70c69b74c'),('b270f3086eda456fa9545ab57dafccad','2025-06-21 10:29:36.863686','2025-06-21 10:29:36.863686','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','USER','你好',NULL,'1796ba6ebef74dc0aa24394d505e265c'),('ca3dc6959ce945c8a93f0084fadfce71','2025-06-07 10:38:38.302926','2025-06-07 10:38:38.302926','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','ASSISTANT','好的，根据你提供的信息，我来帮你总结一下任务“测试1”的完成情况：\n\n### 任务名称：测试1\n- **截至时间**：2025-06-05T21:15\n- **是否完成**：否\n- **任务步骤及完成情况**：\n  1. **步骤内容**：测试步骤1\n     - **是否完成**：是\n  2. **步骤内容**：测试333\n     - **是否完成**：是\n  3. **步骤内容**：测试步骤2\n     - **是否完成**：是\n\n### 总结\n- 任务“测试1”共有3个步骤，所有步骤都已经完成。\n- 尽管所有步骤都已完成，但整个任务的完成状态仍然标记为“否”。这可能意味着还有其他未列出的步骤或最终确认工作需要完成。\n\n如果你有其他需要补充的信息或进一步的帮助，请告诉我！','[]','ea7ce7b1b5114745ad62c9b1536acc16'),('ede6afd89dda4518a3513ed90ce2cd21','2025-06-21 10:30:13.655771','2025-06-21 10:30:13.655771','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','USER','如何学习Java',NULL,'1796ba6ebef74dc0aa24394d505e265c'),('f0bf5ff70a8b4a4fa0bb4bf7a51eb574','2025-06-07 10:38:38.199405','2025-06-07 10:38:38.199405','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','USER','帮我总结以下我的任务完成情况',NULL,'ea7ce7b1b5114745ad62c9b1536acc16');
 /*!40000 ALTER TABLE `ai_message` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -70,7 +70,7 @@ CREATE TABLE `ai_session` (
 
 LOCK TABLES `ai_session` WRITE;
 /*!40000 ALTER TABLE `ai_session` DISABLE KEYS */;
-INSERT INTO `ai_session` VALUES ('ea7ce7b1b5114745ad62c9b1536acc16','2025-06-05 23:47:13.485088','2025-06-05 23:47:13.485088','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','新的聊天');
+INSERT INTO `ai_session` VALUES ('1796ba6ebef74dc0aa24394d505e265c','2025-06-21 10:07:32.437936','2025-06-21 10:07:32.437936','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','新的聊天'),('928c384040fe4f31955796e70c69b74c','2025-06-21 10:52:32.398342','2025-06-21 10:52:32.398342','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','新的聊天'),('ea7ce7b1b5114745ad62c9b1536acc16','2025-06-05 23:47:13.485088','2025-06-05 23:47:13.485088','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','新的聊天');
 /*!40000 ALTER TABLE `ai_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -164,7 +164,7 @@ CREATE TABLE `listing` (
 
 LOCK TABLES `listing` WRITE;
 /*!40000 ALTER TABLE `listing` DISABLE KEYS */;
-INSERT INTO `listing` VALUES ('2b1f819fc2064cceb38754d0ca0916a8','2025-06-04 21:53:03.819065','2025-06-04 21:53:03.819065','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','起凡测试','0f07d638f1bc401188d86dc650ab06a7'),('7c870f93e70d46eabc6c4226f09dade5','2025-06-04 21:59:10.584459','2025-06-05 21:40:22.766017','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','测试2222112','123');
+INSERT INTO `listing` VALUES ('2b1f819fc2064cceb38754d0ca0916a8','2025-06-04 21:53:03.819065','2025-06-04 21:53:03.819065','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','起凡测试','0f07d638f1bc401188d86dc650ab06a7'),('7c870f93e70d46eabc6c4226f09dade5','2025-06-04 21:59:10.584459','2025-06-05 21:40:22.766017','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','测试2222112','123'),('ab9a47cd4bb8439495f6eabe4d6808f5','2025-06-21 10:31:50.271076','2025-06-21 10:31:50.271076','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','Java后端学习计划','5ee14b91481d4bc9a41a0c3d6c5b40c4');
 /*!40000 ALTER TABLE `listing` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -258,7 +258,7 @@ CREATE TABLE `post` (
 
 LOCK TABLES `post` WRITE;
 /*!40000 ALTER TABLE `post` DISABLE KEYS */;
-INSERT INTO `post` VALUES ('790d3a69baec41ef8d0670fac9b395b7','2025-04-12 10:25:30.738502','2025-04-12 10:25:30.738502','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','[\"https://flash-help.oss-cn-beijing.aliyuncs.com/20250412102529HAeWPsyNawQp37b0bcee28b5cd20051b4d786d840b1d.png\"]','测试123',0);
+INSERT INTO `post` VALUES ('212a911116f6449bb92e68e1eb527080','2025-06-21 11:02:35.318988','2025-06-21 11:02:35.318988','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','[\"https://flash-help.oss-cn-beijing.aliyuncs.com/202506211102322vecKqOhm9sC126acfed4af648500ec9fc2a592b5bb2.png\"]','为什么这个代码跑不起来？',0),('790d3a69baec41ef8d0670fac9b395b7','2025-04-12 10:25:30.738502','2025-04-12 10:25:30.738502','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','[\"https://flash-help.oss-cn-beijing.aliyuncs.com/20250412102529HAeWPsyNawQp37b0bcee28b5cd20051b4d786d840b1d.png\"]','测试123',0);
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -289,7 +289,7 @@ CREATE TABLE `post_comment` (
 
 LOCK TABLES `post_comment` WRITE;
 /*!40000 ALTER TABLE `post_comment` DISABLE KEYS */;
-INSERT INTO `post_comment` VALUES ('05bc0c8e1b7743a886bf7e79744fdb32','2025-04-12 10:25:50.832545','2025-04-12 10:25:50.832545','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','790d3a69baec41ef8d0670fac9b395b7','哈哈哈哈哈',NULL,0);
+INSERT INTO `post_comment` VALUES ('05bc0c8e1b7743a886bf7e79744fdb32','2025-04-12 10:25:50.832545','2025-04-12 10:25:50.832545','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','790d3a69baec41ef8d0670fac9b395b7','哈哈哈哈哈',NULL,0),('5cfcc7c0369d4cc898dc7434fbee8e04','2025-06-21 11:03:21.721045','2025-06-21 11:03:21.721045','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','212a911116f6449bb92e68e1eb527080','哦哦哦，明白了谢谢你','939db5d816f14eb9a4a18f42d05d263a',0),('939db5d816f14eb9a4a18f42d05d263a','2025-06-21 11:03:02.120469','2025-06-21 11:03:02.120469','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','212a911116f6449bb92e68e1eb527080','mysql的密码可能配置错了',NULL,0);
 /*!40000 ALTER TABLE `post_comment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -318,7 +318,7 @@ CREATE TABLE `post_like` (
 
 LOCK TABLES `post_like` WRITE;
 /*!40000 ALTER TABLE `post_like` DISABLE KEYS */;
-INSERT INTO `post_like` VALUES ('0ee7680d45934eb09892361919f11f77','2025-06-05 23:46:08.919022','2025-06-05 23:46:08.919022','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','790d3a69baec41ef8d0670fac9b395b7',0);
+INSERT INTO `post_like` VALUES ('0ee7680d45934eb09892361919f11f77','2025-06-05 23:46:08.919022','2025-06-05 23:46:08.919022','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','790d3a69baec41ef8d0670fac9b395b7',0),('2f2777d2748b4da68223c73dfac9299e','2025-06-21 11:02:44.300084','2025-06-21 11:02:44.300084','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','212a911116f6449bb92e68e1eb527080',0);
 /*!40000 ALTER TABLE `post_like` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -405,7 +405,7 @@ CREATE TABLE `sign` (
 
 LOCK TABLES `sign` WRITE;
 /*!40000 ALTER TABLE `sign` DISABLE KEYS */;
-INSERT INTO `sign` VALUES ('168c8e8d08474669ba7f055334c18d7c','2025-06-05 22:34:58.159377','2025-06-05 22:34:58.159377','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7');
+INSERT INTO `sign` VALUES ('168c8e8d08474669ba7f055334c18d7c','2025-06-05 22:34:58.159377','2025-06-05 22:34:58.159377','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7'),('9029fbf48f7e4302ba926ded2ec08bde','2025-06-21 11:04:44.223936','2025-06-21 11:04:44.223936','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4');
 /*!40000 ALTER TABLE `sign` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -472,7 +472,7 @@ CREATE TABLE `task` (
 
 LOCK TABLES `task` WRITE;
 /*!40000 ALTER TABLE `task` DISABLE KEYS */;
-INSERT INTO `task` VALUES ('de177659bb3246f0aaa7d5e5eb94a16e','2025-06-05 21:17:11.681080','2025-06-05 21:43:34.073400','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','测试1','2025-06-05 21:15:00.000000','2025-06-05 21:15:00.000000','[{\"uid\": 0, \"url\": \"https://flash-help.oss-cn-beijing.aliyuncs.com/20250605211701QC4fuo48E23q9b924c22575497175368f987e4f2911e.png\", \"name\": \"http://tmp/QC4fuo48E23q9b924c22575497175368f987e4f2911e.png\", \"size\": null, \"type\": \"image\", \"status\": \"success\", \"percentage\": null}]','0f07d638f1bc401188d86dc650ab06a7',NULL,'7c870f93e70d46eabc6c4226f09dade5');
+INSERT INTO `task` VALUES ('1304cbaac9eb44eca219c7aaae1d6722','2025-06-21 10:32:38.312770','2025-06-21 10:48:26.088715','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','学习IO流','2025-06-23 10:30:00.000000','2025-06-21 10:30:00.000000','[]','5ee14b91481d4bc9a41a0c3d6c5b40c4',1,'ab9a47cd4bb8439495f6eabe4d6808f5'),('63a30403f9794f5e99dd45d23f64ed09','2025-06-21 10:49:58.429075','2025-06-21 10:49:58.429075','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','学习多线程','2025-06-28 10:45:00.000000','2025-06-25 10:45:00.000000','[]','5ee14b91481d4bc9a41a0c3d6c5b40c4',NULL,'ab9a47cd4bb8439495f6eabe4d6808f5'),('de177659bb3246f0aaa7d5e5eb94a16e','2025-06-05 21:17:11.681080','2025-06-05 21:43:34.073400','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','测试1','2025-06-05 21:15:00.000000','2025-06-05 21:15:00.000000','[{\"uid\": 0, \"url\": \"https://flash-help.oss-cn-beijing.aliyuncs.com/20250605211701QC4fuo48E23q9b924c22575497175368f987e4f2911e.png\", \"name\": \"http://tmp/QC4fuo48E23q9b924c22575497175368f987e4f2911e.png\", \"size\": null, \"type\": \"image\", \"status\": \"success\", \"percentage\": null}]','0f07d638f1bc401188d86dc650ab06a7',NULL,'7c870f93e70d46eabc6c4226f09dade5');
 /*!40000 ALTER TABLE `task` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -502,7 +502,7 @@ CREATE TABLE `task_step` (
 
 LOCK TABLES `task_step` WRITE;
 /*!40000 ALTER TABLE `task_step` DISABLE KEYS */;
-INSERT INTO `task_step` VALUES ('4cd09d42feca46fd88ab8876e87a6dff','2025-06-05 00:19:59.173911','2025-06-05 00:19:59.173911','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','测试111',1,'bfed67fa2d514b19a60eda8498848892'),('6417cb1eb7074d608f73e8e49814f4d6','2025-06-05 21:17:11.741771','2025-06-05 21:43:34.098812','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','测试步骤1',1,'de177659bb3246f0aaa7d5e5eb94a16e'),('7fa67d88de1845b38a21992aabb83383','2025-06-05 21:43:27.432363','2025-06-05 21:43:34.099821','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','测试333',1,'de177659bb3246f0aaa7d5e5eb94a16e'),('8dce54b355d94804ad5ce8daa299acf7','2025-06-05 21:17:11.741771','2025-06-05 21:43:34.099821','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','测试步骤2',1,'de177659bb3246f0aaa7d5e5eb94a16e');
+INSERT INTO `task_step` VALUES ('107deda6b04845cc87605626d216785e','2025-06-21 10:48:26.122072','2025-06-21 10:48:26.122072','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','FileSteam实现文件独写',0,'1304cbaac9eb44eca219c7aaae1d6722'),('4cd09d42feca46fd88ab8876e87a6dff','2025-06-05 00:19:59.173911','2025-06-05 00:19:59.173911','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','测试111',1,'bfed67fa2d514b19a60eda8498848892'),('6417cb1eb7074d608f73e8e49814f4d6','2025-06-05 21:17:11.741771','2025-06-05 21:43:34.098812','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','测试步骤1',1,'de177659bb3246f0aaa7d5e5eb94a16e'),('6c34260d86a543cc92ddf8fa88fbe32e','2025-06-21 10:48:26.122072','2025-06-21 10:48:26.122072','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','ByteArraySteam实现读取二进制到内存再输出',0,'1304cbaac9eb44eca219c7aaae1d6722'),('7dffc00990b5490b971f18ddd259ec38','2025-06-21 10:49:58.437172','2025-06-21 10:49:58.437172','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','看一些多线程的面试题',0,'63a30403f9794f5e99dd45d23f64ed09'),('7fa67d88de1845b38a21992aabb83383','2025-06-05 21:43:27.432363','2025-06-05 21:43:34.099821','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','测试333',1,'de177659bb3246f0aaa7d5e5eb94a16e'),('8b876a3df5fa41a791aa20aa60861a57','2025-06-21 10:49:58.437172','2025-06-21 10:49:58.437172','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','学习Thread和线程池',0,'63a30403f9794f5e99dd45d23f64ed09'),('8dce54b355d94804ad5ce8daa299acf7','2025-06-05 21:17:11.741771','2025-06-05 21:43:34.099821','0f07d638f1bc401188d86dc650ab06a7','0f07d638f1bc401188d86dc650ab06a7','测试步骤2',1,'de177659bb3246f0aaa7d5e5eb94a16e'),('d88c37629f8c4783a22f7ce1d2c6866b','2025-06-21 10:49:58.437172','2025-06-21 10:49:58.437172','5ee14b91481d4bc9a41a0c3d6c5b40c4','5ee14b91481d4bc9a41a0c3d6c5b40c4','学习concurrent包相关的内容',0,'63a30403f9794f5e99dd45d23f64ed09');
 /*!40000 ALTER TABLE `task_step` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -534,7 +534,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('0f07d638f1bc401188d86dc650ab06a7','2024-01-10 10:48:02.758735','2025-04-06 19:25:23.841768','起凡','https://bottle-post.oss-cn-guangzhou.aliyuncs.com/20241212200253tmp_11d616da0b6525682e41821abad8cb86ba99319acd538c626eefe9cd8f981516.jpeg','MALE','13656987994','$2a$10$pl/GmO3mDaqWjBtmfXzppOFQwnW/jlinORR6.83Lo7QdTuU4uh5AG','NORMAL'),('35859366a401400c9c0557d9b97f249b','2024-12-12 21:28:11.887043','2025-03-16 22:29:53.981380','风吹未眠','https://bottle-post.oss-cn-guangzhou.aliyuncs.com/202412122128170I99WPW1qnPdf54faee9d132f1ff724064c72cd9aad9.jpeg','FEMALE','18050563383','$2a$10$o/8jLIWMe8zNzr1C7idjeeQCweLvQ8cSKMCfKPoR/dluLMl7TJOje','NORMAL');
+INSERT INTO `user` VALUES ('0f07d638f1bc401188d86dc650ab06a7','2024-01-10 10:48:02.758735','2025-04-06 19:25:23.841768','起凡','https://bottle-post.oss-cn-guangzhou.aliyuncs.com/20241212200253tmp_11d616da0b6525682e41821abad8cb86ba99319acd538c626eefe9cd8f981516.jpeg','MALE','13656987994','$2a$10$pl/GmO3mDaqWjBtmfXzppOFQwnW/jlinORR6.83Lo7QdTuU4uh5AG','NORMAL'),('35859366a401400c9c0557d9b97f249b','2024-12-12 21:28:11.887043','2025-03-16 22:29:53.981380','风吹未眠','https://bottle-post.oss-cn-guangzhou.aliyuncs.com/202412122128170I99WPW1qnPdf54faee9d132f1ff724064c72cd9aad9.jpeg','FEMALE','18050563383','$2a$10$o/8jLIWMe8zNzr1C7idjeeQCweLvQ8cSKMCfKPoR/dluLMl7TJOje','NORMAL'),('5ee14b91481d4bc9a41a0c3d6c5b40c4','2025-06-21 10:05:56.127101','2025-06-21 10:07:19.084910','起凡','https://flash-help.oss-cn-beijing.aliyuncs.com/20250621100714ZlTuopl7lC8r3e744c849f0d33763b27e96a9d09be98.jpeg','FEMALE','44666619350','123456','NORMAL');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -592,7 +592,7 @@ CREATE TABLE `user_we_chat` (
 
 LOCK TABLES `user_we_chat` WRITE;
 /*!40000 ALTER TABLE `user_we_chat` DISABLE KEYS */;
-INSERT INTO `user_we_chat` VALUES ('813ee8bcfa004e9fb92ecd56a37060fa','2025-04-02 22:36:29.970365','2025-04-02 22:36:29.970365','oEheF5USRu6Y3qWjpb3wJPBfuejw','0f07d638f1bc401188d86dc650ab06a7'),('e01243b7819b4e82b123288940a1738a','2024-12-12 21:28:11.922043','2024-12-12 21:28:11.922043','oVT0q5L_hVU2o6pkjdTHwLwQfHJg','35859366a401400c9c0557d9b97f249b');
+INSERT INTO `user_we_chat` VALUES ('5b7e9efd41bb4f83b4f5fd94b7f403b4','2025-06-21 10:05:56.151110','2025-06-21 10:05:56.151110','oEheF5USRu6Y3qWjpb3wJPBfuejw','5ee14b91481d4bc9a41a0c3d6c5b40c4');
 /*!40000 ALTER TABLE `user_we_chat` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -605,4 +605,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-07 17:28:25
+-- Dump completed on 2025-06-21 11:06:18
